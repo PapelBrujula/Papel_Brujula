@@ -225,7 +225,7 @@ details{background:var(--s1);border:1px solid var(--bd);border-radius:10px;paddi
 <li>Entrega urgente (el mismo día): 30 % adicional.</li>
 <li>Pagos por transferencia o depósito bancario.</li>
 </ul>
-<div class="ctas"><a class="btn btn-p" href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer">Pedir mi cotización por WhatsApp</a></div>
+<div class="ctas"><a class="btn btn-p" href="https://wa.me/526572159057" target="_blank" rel="noopener noreferrer">Pedir mi cotización por WhatsApp</a></div>
 </div></section>
 
 <section id="faq" aria-labelledby="h-faq"><div class="wrap">
@@ -264,15 +264,15 @@ Atentamente,
 <h2 id="h-con">Contacto</h2>
 <p>El primer paso es una conversación. Cuéntanos en qué gestión necesitas avanzar.</p>
 <p class="mail">papelbrujula@gmail.com</p>
-<p>WhatsApp: <a href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer">669 220 5724</a></p>
+<p>WhatsApp: <a href="https://wa.me/526572159057" target="_blank" rel="noopener noreferrer">657 215 9057</a></p>
 <div class="row"><a class="btn btn-p" href="mailto:papelbrujula@gmail.com">Escribir a Papelbrújula</a>
-<a class="btn btn-s" href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al 669 220 5724">Escribir por WhatsApp</a>
+<a class="btn btn-s" href="https://wa.me/526572159057" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al 657 215 9057">Escribir por WhatsApp</a>
 <button type="button" class="btn btn-s" id="copyMail">Copiar correo al portapapeles</button></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">© Papelbrújula · Atención remota. No sustituye asesoría jurídica ni representación legal.
-<details><summary>Aviso de privacidad (resumen)</summary><p><strong>Responsable:</strong> Papelbrújula, contacto en papelbrujula@gmail.com o WhatsApp 669 220 5724. <strong>Datos:</strong> los que tú nos envíes por correo para tu gestión (nombre, descripción del caso, documentos). <strong>Finalidad:</strong> preparar y dar seguimiento a tu gestión y comunicarnos contigo. <strong>Transferencias:</strong> no vendemos ni compartimos tus datos, salvo que tu gestión lo requiera y tú lo autorices. <strong>Tus derechos:</strong> puedes solicitar acceso, rectificación, cancelación u oposición escribiendo al correo de contacto. Este sitio web no almacena los datos del asistente.</p></details></div></footer>
+<details><summary>Aviso de privacidad (resumen)</summary><p><strong>Responsable:</strong> Papelbrújula, contacto en papelbrujula@gmail.com o WhatsApp 657 215 9057. <strong>Datos:</strong> los que tú nos envíes por correo para tu gestión (nombre, descripción del caso, documentos). <strong>Finalidad:</strong> preparar y dar seguimiento a tu gestión y comunicarnos contigo. <strong>Transferencias:</strong> no vendemos ni compartimos tus datos, salvo que tu gestión lo requiera y tú lo autorices. <strong>Tus derechos:</strong> puedes solicitar acceso, rectificación, cancelación u oposición escribiendo al correo de contacto. Este sitio web no almacena los datos del asistente.</p></details></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -352,7 +352,7 @@ $('#wf').addEventListener('submit',function(e){e.preventDefault()});
 $('#ctx').addEventListener('input',function(){$('#cnt').textContent=this.value.length});
 var tomorrow=new Date();tomorrow.setHours(0,0,0,0);$('#fec').min=tomorrow.toISOString().slice(0,10);
 $('#b-copy').addEventListener('click',function(){if(state)copy(state,'Resumen copiado al portapapeles')});
-$('#b-wa').addEventListener('click',function(){if(!state)return;var t='Hola, quisiera apoyo con una gestión.\n\n'+state,u='https://wa.me/526692205724';if(t.length<=1500){u+='?text='+encodeURIComponent(t)}else{copy(state,'Resumen copiado: pégalo en el chat de WhatsApp')}window.open(u,'_blank','noopener,noreferrer')});
+$('#b-wa').addEventListener('click',function(){if(!state)return;var t='Hola, quisiera apoyo con una gestión.\n\n'+state,u='https://wa.me/526572159057';if(t.length<=1500){u+='?text='+encodeURIComponent(t)}else{copy(state,'Resumen copiado: pégalo en el chat de WhatsApp')}window.open(u,'_blank','noopener,noreferrer')});
 $('#b-gmail').addEventListener('click',function(){if(!state)return;var s='Solicitud de apoyo: '+radio('apoyo')+' ('+radio('dest')+')',b='Hola, equipo de Papelbrújula:\n\nQuisiera recibir apoyo con la siguiente gestión.\n\n'+state+'\n\nQuedo atento(a). Gracias.';window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+MAIL+'&su='+encodeURIComponent(s)+'&body='+encodeURIComponent(b),'_blank','noopener,noreferrer')});
 $('#b-dl').addEventListener('click',function(){if(!state)return;
   var u=URL.createObjectURL(new Blob([state],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=u;a.download='solicitud-papelbrujula.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u)},1000);toast('Resumen descargado')});
