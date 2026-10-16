@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data:; form-action 'none'; base-uri 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Papelbrújula · Tus gestiones, claras y en marcha</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Papelbrújula · Tus gestiones, claras y en marcha">
+<meta property="og:description" content="Oficios, peticiones, orden documental y seguimiento remoto de trámites para personas y pequeños negocios.">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0B111E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B111E'/%3E%3Cpath d='M32 8l9 24-9 24-9-24z' fill='%23D4AF37'/%3E%3Cpath d='M8 32h48' stroke='%2394A3B8' stroke-width='3'/%3E%3C/svg%3E">
+<meta name="description" content="Redacción de oficios y peticiones, orden documental y seguimiento remoto de trámites para personas y pequeños negocios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B111E;--s1:#151F32;--s2:#1E293B;--bd:#2E3C56;--gold:#D4AF37;--gold2:#C5A059;--silver:#94A3B8;--tx:#F8FAFC;--tx2:#CBD5E1;--err:#FCA5A5;
+--serif:'Merriweather',Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx2);font:400 1.0625rem/1.7 var(--sans);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--serif);color:var(--tx);line-height:1.2;margin:0 0 .6em}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}h3{font-size:1.15rem}
+p{margin:0 0 1em;max-width:68ch}
+a{color:var(--gold)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.sub{color:var(--silver)}
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,17,30,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;gap:1rem;min-height:68px;flex-wrap:wrap;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--tx);text-decoration:none;font:900 1.2rem var(--serif)}
+.brand svg{width:38px;height:38px}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;align-items:center}
+nav a{color:var(--tx2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.4rem;border-radius:8px;border:1px solid var(--gold);font:600 1rem var(--sans);cursor:pointer;text-decoration:none;transition:background .15s,color .15s}
+.btn-p{background:var(--gold);color:#0B111E}.btn-p:hover{background:#e3c25a}
+.btn-s{background:transparent;color:var(--gold)}.btn-s:hover{background:rgba(212,175,55,.12)}
+header .btn{min-height:40px;padding:.4rem 1rem;font-size:.92rem}
+/* hero */
+.hero{position:relative;overflow:hidden;padding-top:clamp(3rem,9vw,7rem)}
+.hero .rose{position:absolute;right:-8%;top:50%;width:min(640px,80vw);transform:translateY(-50%);opacity:.16;pointer-events:none;animation:spin 120s linear infinite}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(2.8rem,9vw,5.6rem);font-weight:900;letter-spacing:-.02em;margin-bottom:.15em}
+.hero .tag{font:700 clamp(1.3rem,3vw,1.9rem) var(--serif);color:var(--gold);margin-bottom:1rem}
+.hero p{font-size:1.15rem}
+.ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:1.6rem}
+/* cards */
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:1.5rem}
+.steps{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));position:relative}
+.steps li{background:var(--s1);border:1px solid var(--bd);border-top:3px solid var(--gold);border-radius:12px;padding:1.5rem}
+.num{font:900 2.2rem var(--serif);color:var(--gold);display:block;line-height:1}
+.steps h3{margin-top:.6rem}
+.alt{background:linear-gradient(var(--s1),var(--bg));border-block:1px solid var(--bd)}
+/* catalog */
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 1rem}
+.chip{background:var(--s2);color:var(--tx2);border:1px solid var(--bd);border-radius:999px;padding:.5rem 1rem;min-height:44px;font:500 .95rem var(--sans);cursor:pointer}
+.chip[aria-selected="true"]{background:var(--gold);color:#0B111E;border-color:var(--gold);font-weight:600}
+.panel{background:var(--s2);border:1px solid var(--bd);border-left:4px solid var(--gold2);border-radius:10px;padding:1.2rem 1.4rem}
+.panel p{margin:0}
+/* wizard */
+.wiz{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:clamp(1.2rem,3vw,2.2rem);margin-top:1.5rem}
+.prog{display:flex;gap:.5rem;margin:0 0 1.5rem;padding:0;list-style:none}
+.prog li{flex:1;height:6px;border-radius:3px;background:var(--bd)}
+.prog li.on{background:var(--gold)}
+fieldset{border:0;margin:0;padding:0}
+legend{font:700 1.25rem var(--serif);color:var(--tx);margin-bottom:1rem;padding:0}
+.opt{display:flex;gap:.8rem;align-items:flex-start;background:var(--s2);border:1px solid var(--bd);border-radius:10px;padding:.9rem 1rem;margin-bottom:.7rem;cursor:pointer}
+.opt:has(input:checked){border-color:var(--gold);background:#232f45}
+.opt input{margin-top:.35rem;accent-color:var(--gold);width:1.1rem;height:1.1rem;flex:none}
+.opt small{display:block;color:var(--silver)}
+label.l{display:block;font-weight:600;color:var(--tx);margin:1.1rem 0 .4rem}
+textarea,input[type=text],input[type=date]{width:100%;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:.75rem .9rem;font:400 1rem var(--sans);min-height:48px}
+textarea{min-height:140px;resize:vertical}
+.hint{font-size:.88rem;color:var(--silver);margin:.3rem 0 0}
+.err{color:var(--err);font-size:.92rem;margin:.4rem 0 0;min-height:1.2em}
+.warn{background:rgba(212,175,55,.1);border:1px solid var(--gold2);border-radius:8px;padding:.8rem 1rem;font-size:.95rem;margin-bottom:1rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.nav2{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.5rem;flex-wrap:wrap}
+pre{background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:1rem;white-space:pre-wrap;word-break:break-word;font:400 .95rem/1.6 var(--sans);color:var(--tx);max-height:420px;overflow:auto}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}
+/* limits */
+.limits{border:2px solid var(--silver);border-radius:14px;padding:clamp(1.4rem,3vw,2.2rem);display:flex;gap:1.2rem;align-items:flex-start;background:var(--s1)}
+.limits svg{flex:none;width:40px;height:40px}
+.links{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+/* contact */
+.mail{font:700 clamp(1.2rem,3vw,1.7rem) var(--serif);color:var(--gold);word-break:break-all}
+footer{border-top:1px solid var(--bd);padding:1.8rem 0;color:var(--silver);font-size:.9rem}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--gold);color:#0B111E;font-weight:600;padding:.8rem 1.3rem;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:40}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+details{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:.2rem 1.1rem;margin-bottom:.7rem}summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;color:var(--tx)}details p{margin:.2rem 0 1rem}.ej{background:var(--s2);border:1px solid var(--bd);border-left:4px solid var(--gold2);border-radius:10px;padding:1.2rem 1.4rem}.ej pre{max-height:none;margin:.8rem 0 0}.two{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:1.5rem}footer details{background:transparent;margin-top:1rem}footer summary{color:var(--tx2);font-weight:500}
+@media(max-width:760px){nav ul{gap:.9rem}.hero .rose{opacity:.1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .rose{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="logo" viewBox="0 0 64 64"><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<rect x="17" y="12" width="30" height="40" rx="3" stroke="#94A3B8" stroke-width="2"/>
+<path d="M32 4v8M32 52v8M4 32h13M47 32h13" stroke="#D4AF37" stroke-width="2.5"/>
+<path d="M32 18l5 14-5 14-5-14z" fill="#D4AF37" stroke="#D4AF37" stroke-width="1"/>
+<path d="M56 35l3 3-11 11-4-4z" fill="#94A3B8"/><path d="M44 45l4 4-7 7z" fill="#D4AF37"/></g></symbol>
+<symbol id="rose" viewBox="0 0 200 200"><g fill="none" stroke="#D4AF37" stroke-width="1"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="70" stroke="#94A3B8"/><circle cx="100" cy="100" r="40" stroke="#94A3B8"/>
+<path d="M100 4l14 82 82 14-82 14-14 82-14-82-82-14 82-14z" fill="rgba(212,175,55,.25)"/><path d="M32 32l48 48M168 32l-48 48M32 168l48-48M168 168l-48-48" stroke="#94A3B8"/></g></symbol>
+</defs></svg>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#inicio" aria-label="Papelbrújula, ir al inicio"><svg aria-hidden="true"><use href="#logo"/></svg>Papelbrújula</a>
+<nav aria-label="Principal"><ul>
+<li><a href="#ruta">Cómo funciona</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#gestion">Iniciar gestión</a></li><li><a href="#tarifas">Tarifas</a></li><li><a href="#faq">Preguntas</a></li><li><a href="#limites">Aviso importante</a></li>
+<li><a class="btn btn-p" href="mailto:papelbrujula@gmail.com">Escribir a Papelbrújula</a></li></ul></nav>
+</div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-labelledby="h1">
+<svg class="rose" aria-hidden="true"><use href="#rose"/></svg>
+<div class="wrap">
+<h1 id="h1">Papelbrújula</h1>
+<p class="tag">Tus gestiones, claras y en marcha.</p>
+<p>Papelbrújula te ayuda a redactar oficios y peticiones, ordenar documentos y dar seguimiento remoto a tus trámites, paso a paso. Atención completamente a distancia para personas y pequeños negocios.</p>
+<div class="ctas"><a class="btn btn-p" href="#gestion">Preparar mi escrito o gestión</a><a class="btn btn-s" href="mailto:papelbrujula@gmail.com">Escribir a Papelbrújula</a></div>
+</div></section>
+
+<section id="ruta" class="alt" aria-labelledby="h-ruta"><div class="wrap">
+<h2 id="h-ruta">Una ruta en claro</h2>
+<p class="sub">Tres pasos, siempre a distancia.</p>
+<ol class="steps">
+<li><span class="num">01</span><h3>Entender</h3><p>Cuéntanos el contexto. Comparte qué necesitas resolver y qué documentos tienes a la mano.</p></li>
+<li><span class="num">02</span><h3>Preparar</h3><p>Acordamos el apoyo. Definimos si conviene trabajar un documento puntual o dar seguimiento. Damos estructura y tono formal a lo que necesitas comunicar.</p></li>
+<li><span class="num">03</span><h3>Dar seguimiento</h3><p>Avanzamos con claridad. Recibes comunicación sencilla sobre cada paso, revisión de respuestas y ubicación del siguiente paso administrativo.</p></li>
+</ol></div></section>
+
+<section id="servicios" aria-labelledby="h-serv"><div class="wrap">
+<h2 id="h-serv">Menos enredos. Más claridad para avanzar.</h2>
+<p class="sub">Escritos y gestiones de toda índole.</p>
+<div class="grid">
+<article class="card"><h3>Oficios, peticiones y quejas</h3><p>Redacción para dependencias, instituciones de salud o empresas.</p></article>
+<article class="card"><h3>Documentos en orden</h3><p>Organización de la información y armado de listas claras de lo que hace falta para tu gestión.</p></article>
+<article class="card"><h3>Seguimiento a distancia</h3><p>Apoyo administrativo pensado para acompañarte durante varios pasos.</p></article>
+</div>
+<h3 style="margin-top:2.5rem">¿Con quién es tu trámite?</h3>
+<div class="chips" role="tablist" aria-label="Casos de uso por tipo de destinatario" id="chips"></div>
+<div class="panel" id="casePanel" role="tabpanel" aria-live="polite"><p></p></div>
+</div></section>
+
+<section id="gestion" class="alt" aria-labelledby="h-wiz"><div class="wrap">
+<h2 id="h-wiz">Prepara tu escrito o gestión</h2>
+<p>Ordena tu caso en cuatro pasos antes de enviarlo. Todo se procesa en tu navegador y no se guarda.</p>
+<div class="wiz">
+<ol class="prog" id="prog" aria-hidden="true"><li class="on"></li><li></li><li></li><li></li></ol>
+<form id="wf" novalidate autocomplete="off" aria-label="Asistente de solicitud">
+<div class="hp" aria-hidden="true"><label>No llenar este campo<input type="text" name="web" id="hp" tabindex="-1" autocomplete="off"></label></div>
+
+<fieldset data-step="1"><legend>Paso 1 de 4 · Tipo de apoyo</legend>
+<label class="opt"><input type="radio" name="apoyo" value="Redacción de oficio, petición o queja puntual"><span>Redacción de oficio, petición o queja puntual<small>Un documento concreto, con tono formal.</small></span></label>
+<label class="opt"><input type="radio" name="apoyo" value="Organización y checklist de documentos"><span>Organización y checklist de documentos<small>Una lista clara de lo que hace falta.</small></span></label>
+<label class="opt"><input type="radio" name="apoyo" value="Seguimiento administrativo a distancia"><span>Seguimiento administrativo a distancia<small>Acompañamiento durante varios pasos.</small></span></label>
+<p class="err" role="alert"></p></fieldset>
+
+<fieldset data-step="2" hidden><legend>Paso 2 de 4 · Destinatario del trámite</legend>
+<label class="opt"><input type="radio" name="dest" value="Dependencia gubernamental"><span>Dependencia gubernamental</span></label>
+<label class="opt"><input type="radio" name="dest" value="Institución de salud"><span>Institución de salud</span></label>
+<label class="opt"><input type="radio" name="dest" value="Empresa o proveedor privado"><span>Empresa o proveedor privado</span></label>
+<label class="opt"><input type="radio" name="dest" value="Pequeño negocio"><span>Pequeño negocio</span></label>
+<label class="opt"><input type="radio" name="dest" value="Otro"><span>Otro</span></label>
+<p class="err" role="alert"></p></fieldset>
+
+<fieldset data-step="3" hidden><legend>Paso 3 de 4 · Contexto y documentos a la mano</legend>
+<div class="warn"><strong>Cuida tu privacidad.</strong> No escribas contraseñas, NIP, números de tarjeta ni datos bancarios confidenciales.</div>
+<label class="l" for="nom">Tu nombre (opcional)</label>
+<input type="text" id="nom" maxlength="80" aria-describedby="e-nom"><p class="err" id="e-nom"></p>
+<label class="l" for="ctx">¿Qué necesitas resolver?</label>
+<textarea id="ctx" maxlength="1200" aria-describedby="h-ctx e-ctx"></textarea>
+<p class="hint" id="h-ctx"><span id="cnt">0</span>/1200 caracteres · mínimo 20</p><p class="err" id="e-ctx"></p>
+<label class="l" for="fec">Fecha límite (si existe)</label>
+<input type="date" id="fec" aria-describedby="e-fec"><p class="err" id="e-fec"></p>
+<p class="l" style="margin-bottom:.5rem">Documentos que ya tienes</p>
+<label class="opt"><input type="checkbox" name="doc" value="Identificación"><span>Identificación</span></label>
+<label class="opt"><input type="checkbox" name="doc" value="Acuses previos"><span>Acuses previos</span></label>
+<label class="opt"><input type="checkbox" name="doc" value="Contratos"><span>Contratos</span></label>
+<label class="opt"><input type="checkbox" name="doc" value="Comprobantes"><span>Comprobantes</span></label>
+<label class="opt"><input type="checkbox" name="doc" value="Oficios anteriores"><span>Oficios anteriores</span></label>
+</fieldset>
+
+<fieldset data-step="4" hidden><legend>Paso 4 de 4 · Tu solicitud</legend>
+<p>Revisa el resumen. Puedes copiarlo, descargarlo o abrirlo en tu correo hacia papelbrujula@gmail.com.</p>
+<pre id="out" tabindex="0" aria-label="Resumen estructurado del caso"></pre>
+<div class="row">
+<button type="button" class="btn btn-p" id="b-mail">Abrir en mi correo</button>
+<button type="button" class="btn btn-s" id="b-wa">Enviar por WhatsApp</button>
+<button type="button" class="btn btn-s" id="b-gmail">Abrir en Gmail (web)</button>
+<button type="button" class="btn btn-s" id="b-copy">Copiar resumen</button>
+<button type="button" class="btn btn-s" id="b-dl">Descargar .txt</button></div>
+</fieldset>
+
+<div class="nav2" id="nav2">
+<button type="button" class="btn btn-s" id="b-back" hidden>Atrás</button>
+<button type="button" class="btn btn-p" id="b-next">Continuar</button>
+</div>
+</form></div></div></section>
+
+<section id="tarifas" aria-labelledby="h-tar"><div class="wrap">
+<h2 id="h-tar">Tarifas claras</h2>
+<p class="sub">Precios en pesos mexicanos. Antes de empezar confirmamos contigo el alcance y el costo final.</p>
+<div class="grid">
+<article class="card"><h3>Escrito sencillo</h3><span class="num" style="font-size:1.7rem">Desde $200</span><p>Oficio, petición o queja de una página, con una revisión incluida.</p></article>
+<article class="card"><h3>Escrito con anexos</h3><span class="num" style="font-size:1.7rem">Desde $350</span><p>Varias partes y relación de anexos, con una revisión incluida.</p></article>
+<article class="card"><h3>Documentos en orden</h3><span class="num" style="font-size:1.7rem">Desde $250</span><p>Lista clara de lo que hace falta y orden de tu información.</p></article>
+<article class="card"><h3>Seguimiento a distancia</h3><span class="num" style="font-size:1.7rem">A cotizar</span><p>Por pasos o por mes, según lo que necesite tu caso.</p></article>
+</div>
+<ul>
+<li>Para comenzar se pide un anticipo del 50 %; el resto se paga al entregar.</li>
+<li>Entrega urgente (el mismo día): 30 % adicional.</li>
+<li>Pagos por transferencia o depósito bancario.</li>
+</ul>
+<div class="ctas"><a class="btn btn-p" href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer">Pedir mi cotización por WhatsApp</a></div>
+</div></section>
+
+<section id="faq" aria-labelledby="h-faq"><div class="wrap">
+<h2 id="h-faq">Preguntas frecuentes</h2>
+<details><summary>¿Qué documentos suelen hacer falta en un trámite?</summary><p>Cada trámite pide lo suyo, pero con frecuencia se necesitan una identificación oficial, un comprobante de domicilio, contratos o recibos relacionados y los acuses de gestiones anteriores. Te armamos la lista según tu caso.</p></details>
+<details><summary>¿Cómo se da seguimiento a un folio?</summary><p>Conserva el acuse con su folio y la fecha de entrega, consulta el medio de seguimiento que indique la institución y anota cada respuesta recibida. Si das seguimiento con nosotros, llevamos ese registro por ti.</p></details>
+<details><summary>¿Cuánto tarda y cuánto cuesta?</summary><p>Depende del tipo de apoyo; consulta las tarifas más arriba. En el paso 02 acordamos contigo el alcance, los tiempos y el costo final antes de empezar.</p></details>
+<details><summary>¿Me representan ante la autoridad?</summary><p>No. Preparamos y acompañamos gestiones administrativas; no sustituimos asesoría jurídica ni representación legal.</p></details>
+<details><summary>¿Qué información no debo enviar?</summary><p>Contraseñas, NIP, números de tarjeta y datos bancarios confidenciales. Nunca los necesitamos para redactar o dar seguimiento.</p></details>
+<div class="two">
+<div class="ej"><h3>Así queda un escrito</h3><p>Ejemplo ficticio, sin datos reales:</p><pre>Asunto: Solicitud de información sobre el estado de mi trámite
+
+A quien corresponda:
+
+Por medio del presente, y con fundamento en mi derecho de petición, solicito se me informe el estado del trámite con folio [FOLIO], presentado el [FECHA]. Anexo copia del acuse de recibo.
+
+Agradezco su atención y quedo al pendiente de su respuesta.
+
+Atentamente,
+[Nombre]</pre></div>
+<div class="ej"><h3>Confidencialidad</h3><p>Usamos tus documentos solo para preparar y dar seguimiento a tu gestión. Este sitio no guarda lo que escribes en el asistente: el resumen se arma en tu navegador y tú decides si lo envías.</p></div>
+</div>
+</div></section>
+
+<section id="limites" aria-labelledby="h-lim"><div class="wrap">
+<div class="limits" role="note">
+<svg viewBox="0 0 40 40" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="20" r="17"/><path d="M20 18v11"/><circle cx="20" cy="12" r="1" fill="#94A3B8"/></svg>
+<div><h2 id="h-lim">Límites claros</h2>
+<p><strong>Aviso importante:</strong> Papelbrújula prepara y acompaña gestiones administrativas; no sustituye asesoría jurídica ni representación legal. Si aplica a tu situación, te orientamos hacia opciones públicas gratuitas como Profeco o Concilianet.</p>
+<div class="links">
+<a class="btn btn-s" href="https://www.profeco.gob.mx" target="_blank" rel="noopener noreferrer">Profeco (sitio oficial)</a>
+<a class="btn btn-s" href="https://concilianet.profeco.gob.mx" target="_blank" rel="noopener noreferrer">Concilianet (queja en línea)</a></div>
+</div></div></div></section>
+
+<section id="contacto" class="alt" aria-labelledby="h-con"><div class="wrap">
+<h2 id="h-con">Contacto</h2>
+<p>El primer paso es una conversación. Cuéntanos en qué gestión necesitas avanzar.</p>
+<p class="mail">papelbrujula@gmail.com</p>
+<p>WhatsApp: <a href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer">669 220 5724</a></p>
+<div class="row"><a class="btn btn-p" href="mailto:papelbrujula@gmail.com">Escribir a Papelbrújula</a>
+<a class="btn btn-s" href="https://wa.me/526692205724" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al 669 220 5724">Escribir por WhatsApp</a>
+<button type="button" class="btn btn-s" id="copyMail">Copiar correo al portapapeles</button></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© Papelbrújula · Atención remota. No sustituye asesoría jurídica ni representación legal.
+<details><summary>Aviso de privacidad (resumen)</summary><p><strong>Responsable:</strong> Papelbrújula, contacto en papelbrujula@gmail.com o WhatsApp 669 220 5724. <strong>Datos:</strong> los que tú nos envíes por correo para tu gestión (nombre, descripción del caso, documentos). <strong>Finalidad:</strong> preparar y dar seguimiento a tu gestión y comunicarnos contigo. <strong>Transferencias:</strong> no vendemos ni compartimos tus datos, salvo que tu gestión lo requiera y tú lo autorices. <strong>Tus derechos:</strong> puedes solicitar acceso, rectificación, cancelación u oposición escribiendo al correo de contacto. Este sitio web no almacena los datos del asistente.</p></details></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+var MAIL='papelbrujula@gmail.com',T0=Date.now(),MIN_MS=10000;
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){t.classList.remove('show')},2600)}
+function copy(txt,msg){
+  function fb(){var a=document.createElement('textarea');a.value=txt;a.setAttribute('readonly','');a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand('copy')}catch(e){}document.body.removeChild(a);toast(ok?msg:'No se pudo copiar. Selecciona el texto y cópialo.')}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(function(){toast(msg)},fb)}else fb();
+}
+$('#copyMail').addEventListener('click',function(){copy(MAIL,'Correo copiado al portapapeles')});
+
+/* catálogo */
+var CASES=[
+['Dependencias públicas','Oficios de petición, solicitudes de información, seguimiento a folios y respuestas pendientes ante oficinas de gobierno.'],
+['Instituciones de salud','Peticiones y quejas por citas, estudios, medicamentos o expedientes, redactadas con claridad y tono formal.'],
+['Empresas privadas','Escritos de reclamación o aclaración dirigidos a proveedores, con los datos y antecedentes en orden.'],
+['Bancos y aseguradoras','Aclaraciones de cargos, solicitudes de estados de cuenta o seguimiento a reclamaciones, con checklist de documentos.'],
+['Servicios públicos','Reportes y aclaraciones por agua, luz, gas o telefonía, con comprobantes y acuses organizados.'],
+['Pequeños negocios','Organización de documentos para trámites, cartas formales a clientes o proveedores y seguimiento administrativo.']];
+var chips=$('#chips'),panel=$('#casePanel p');
+CASES.forEach(function(c,i){var b=document.createElement('button');b.type='button';b.className='chip';b.setAttribute('role','tab');b.textContent=c[0];b.setAttribute('aria-selected',i===0?'true':'false');b.tabIndex=i===0?0:-1;
+  b.addEventListener('click',function(){sel(i,true)});chips.appendChild(b)});
+function sel(i,focus){$$('.chip').forEach(function(b,j){b.setAttribute('aria-selected',j===i?'true':'false');b.tabIndex=j===i?0:-1;if(j===i&&focus)b.focus()});panel.textContent=CASES[i][1]}
+chips.addEventListener('keydown',function(e){var l=CASES.length,i=$$('.chip').findIndex(function(b){return b.getAttribute('aria-selected')==='true'});
+  if(e.key==='ArrowRight'){e.preventDefault();sel((i+1)%l,true)}else if(e.key==='ArrowLeft'){e.preventDefault();sel((i-1+l)%l,true)}});
+sel(0,false);
+
+/* sanitización */
+var BAD=/[<>{}\[\]\\`|^~=]/;
+function clean(s,max){return String(s).replace(/<[^>]*>/g,'').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F\u200B-\u200F\u202A-\u202E]/g,'').replace(/[ \t]+/g,' ').replace(/\n{3,}/g,'\n\n').trim().slice(0,max)}
+var ALLOWED=/^[\p{L}\p{N}\p{M}\s.,;:¿?¡!()\-_\/%$#@"'“”‘’+°ªº&*…–—]*$/u;
+var STEPS=$$('fieldset[data-step]'),cur=1,state=null;
+function show(n){cur=n;STEPS.forEach(function(f){f.hidden=Number(f.dataset.step)!==n});$$('#prog li').forEach(function(li,i){li.classList.toggle('on',i<n)});
+  $('#b-back').hidden=n===1;var nx=$('#b-next');nx.hidden=n===4;nx.textContent=n===3?'Generar resumen':'Continuar';
+  var f=STEPS[n-1];var t=$('input,textarea,pre',f);if(t)t.focus({preventScroll:true});$('#gestion .wiz').scrollIntoView({block:'start',behavior:'smooth'})}
+function err(id,m){var e=typeof id==='string'?$('#'+id):id;e.textContent=m||''}
+function radio(name){var r=$('input[name='+name+']:checked');return r?r.value:null}
+function check(n){
+  if(n===1||n===2){var nm=n===1?'apoyo':'dest';var ok=!!radio(nm);err($('.err',STEPS[n-1]),ok?'':'Elige una opción para continuar.');return ok}
+  if(n===3){var ok=true;
+    var nom=$('#nom').value,ctx=$('#ctx').value,fec=$('#fec').value;
+    err('e-nom','');err('e-ctx','');err('e-fec','');
+    if(nom&&(nom.length>80||BAD.test(nom)||!ALLOWED.test(nom))){err('e-nom','Usa solo letras, números y signos de puntuación comunes.');ok=false}
+    var c=clean(ctx,1200);
+    if(c.length<20){err('e-ctx','Describe tu caso con al menos 20 caracteres.');ok=false}
+    else if(BAD.test(ctx)||!ALLOWED.test(ctx)){err('e-ctx','Quita caracteres especiales como < > { } [ ] \\ ` | ^ ~ =.');ok=false}
+    if(fec){var d=new Date(fec+'T00:00:00'),today=new Date();today.setHours(0,0,0,0);
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(fec)||isNaN(d)||d<today){err('e-fec','Elige una fecha de hoy en adelante.');ok=false}}
+    if(!ok){var first=$('.err:not(:empty)',STEPS[2]);if(first){var inp=first.previousElementSibling;(inp&&inp.tagName!=='LABEL'?inp:$('#ctx')).focus()}}
+    return ok}
+  return true}
+function build(){
+  var docs=$$('input[name=doc]:checked').map(function(c){return c.value});
+  var fec=$('#fec').value,fx='Sin fecha límite indicada';
+  if(fec){var p=fec.split('-');fx=p[2]+'/'+p[1]+'/'+p[0]}
+  var nom=clean($('#nom').value,80);
+  var L=['SOLICITUD DE APOYO · PAPELBRÚJULA','',
+   'Tipo de apoyo: '+radio('apoyo'),'Destinatario del trámite: '+radio('dest'),
+   'Nombre: '+(nom||'No indicado'),'Fecha límite: '+fx,
+   'Documentos a la mano: '+(docs.length?docs.join(', '):'Ninguno indicado'),'',
+   'Contexto del caso:',clean($('#ctx').value,1200),'',
+   'Generado el '+new Date().toLocaleDateString('es-MX')+'. Este resumen no incluye contraseñas ni datos bancarios.'];
+  return L.join('\n')}
+function next(){
+  if(!check(cur))return;
+  if(cur===3){
+    if($('#hp').value!==''){return}               /* honeypot: bots */
+    if(Date.now()-T0<MIN_MS){toast('Un momento: revisa tus datos y vuelve a intentarlo en unos segundos.');return}
+    state=build();$('#out').textContent=state;show(4);return}
+  show(cur+1)}
+$('#b-next').addEventListener('click',next);
+$('#b-back').addEventListener('click',function(){show(cur-1)});
+$('#wf').addEventListener('submit',function(e){e.preventDefault()});
+$('#ctx').addEventListener('input',function(){$('#cnt').textContent=this.value.length});
+var tomorrow=new Date();tomorrow.setHours(0,0,0,0);$('#fec').min=tomorrow.toISOString().slice(0,10);
+$('#b-copy').addEventListener('click',function(){if(state)copy(state,'Resumen copiado al portapapeles')});
+$('#b-wa').addEventListener('click',function(){if(!state)return;var t='Hola, quisiera apoyo con una gestión.\n\n'+state,u='https://wa.me/526692205724';if(t.length<=1500){u+='?text='+encodeURIComponent(t)}else{copy(state,'Resumen copiado: pégalo en el chat de WhatsApp')}window.open(u,'_blank','noopener,noreferrer')});
+$('#b-gmail').addEventListener('click',function(){if(!state)return;var s='Solicitud de apoyo: '+radio('apoyo')+' ('+radio('dest')+')',b='Hola, equipo de Papelbrújula:\n\nQuisiera recibir apoyo con la siguiente gestión.\n\n'+state+'\n\nQuedo atento(a). Gracias.';window.open('https://mail.google.com/mail/?view=cm&fs=1&to='+MAIL+'&su='+encodeURIComponent(s)+'&body='+encodeURIComponent(b),'_blank','noopener,noreferrer')});
+$('#b-dl').addEventListener('click',function(){if(!state)return;
+  var u=URL.createObjectURL(new Blob([state],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=u;a.download='solicitud-papelbrujula.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u)},1000);toast('Resumen descargado')});
+$('#b-mail').addEventListener('click',function(){if(!state)return;
+  var subj='Solicitud de apoyo: '+radio('apoyo')+' ('+radio('dest')+')';
+  var body='Hola, equipo de Papelbrújula:\n\nQuisiera recibir apoyo con la siguiente gestión.\n\n'+state+'\n\nQuedo atento(a). Gracias.';
+  var href='mailto:'+MAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  if(href.length>1900){toast('El resumen es largo: cópialo y pégalo en tu correo.');copy(state,'Resumen copiado al portapapeles');return}
+  window.location.href=href});
+})();
+</script>
+</body>
+</html>
